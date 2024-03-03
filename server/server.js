@@ -13,7 +13,7 @@ db.once('open', () => console.log("DB connected"))
 
 app.use(express.json())
 app.use(express.static('public'))
-app.use(cors('http://127.0.0.1:5500'))
+app.use(cors('https://dreamy-wedding.onrender.com'))
 
 app.use(bodyParser.json());
 // in latest body-parser use like below.

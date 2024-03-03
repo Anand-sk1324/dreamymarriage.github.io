@@ -1,6 +1,6 @@
 const entries = document.getElementById('entries');
 window.onload = async() =>{
-    const baseUrl = "http://localhost:3000/interests/"
+    const baseUrl = "https://dreamy-wedding-api.onrender.com/interests/"
     const response = await fetch(baseUrl, {
         method: "GET",
         headers: {

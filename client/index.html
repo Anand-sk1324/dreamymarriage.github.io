@@ -68,7 +68,13 @@
             <div class="plan" style="--rotation:-0.8deg;">
                 <h2 class="plan-name">Destination</h2>
                 <div class="img-c">
-                    <img src="./img/plans/plan-destnation.png" alt="">
+                    <img src="./img/plans/plan-destination.avif" alt="">
+                </div>
+            </div>
+            <div class="plan" style="--rotation:0deg;">
+                <h2 class="plan-name">Theme</h2>
+                <div class="img-c">
+                    <img src="./img/plans/plan-theme.webp" alt="">
                 </div>
             </div>
             
@@ -345,19 +351,41 @@
             <h1>Contact Us</h1>
             <form>
                 <label for="Name">Name</label>
-                <input type="text" id="Name" name="name" required>
+                <input 
+                    type="text" 
+                    id="Name" 
+                    name="name" required
+                >
 
                 
                 <label for="Phone">Phone</label>
-                <input type="number" id="Phone" name="phone">
+                <input 
+                    type="tel" 
+                    id="Phone" 
+                    name="phone" required
+                    pattern="[0-9]{10}"
+                >
 
                 <label for="Email">Email</label>
-                <input type="email" id="Email" name="email">
+                <input 
+                    type="email" 
+                    id="Email" 
+                    name="email" required
+                >
 
                 
                 <label for="Message">Optional Message</label>
-                <textarea name="" id="Message" cols="30" rows="5" name="msg"></textarea>
-                <input type="submit" value="Send a Mail" id="submit">
+                <textarea 
+                    id="Message" 
+                    cols="30" 
+                    rows="5" 
+                    name="msg"></textarea>
+
+                <input 
+                    type="submit" 
+                    value="Send a Mail" 
+                    id="submit"
+                >
             </form>
         </div>
         <div class="right">
@@ -365,6 +393,5 @@
         </div>
     </div>
 
-    <footer></footer>
 </body>
 </html>

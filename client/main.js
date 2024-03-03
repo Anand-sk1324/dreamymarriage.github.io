@@ -26,7 +26,7 @@ form.addEventListener('submit',async (event) =>{
     const Phone = document.getElementById("Phone");
     const Email = document.getElementById("Email");
 
-    const baseUrl = "http://localhost:3000/interests/"
+    const baseUrl = "https://dreamy-wedding-api.onrender.com/interests/"
     const posting = await fetch(baseUrl, {
         method: "POST",
         headers: {

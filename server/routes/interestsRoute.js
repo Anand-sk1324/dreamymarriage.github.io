@@ -24,27 +24,27 @@ router.post('/', async (req, res) => {
     try {
         const newInterest = await interest.save()
         res.status(201).json(newInterest)
-        sendMail()
+        sendMail(newInterest)
         
     } catch (err) {
         res.status(400).json({ message: err.message })
     }
 })
 
-function sendMail(){
+function sendMail(newInterest){
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'anand.sk1324@gmail.com',
-      pass: 'gpdi rvhc ekwe dacz'
+      user: 'dreamyweddy@gmail.com',
+      pass: 'shza sjef fwbr yyka'
     }
   });
   
   var mailOptions = {
-    from: 'anand.sk1324@gmail.com',
-    to: 'anand.sk1324@gmail.com',
-    subject: 'Sending Email using Node.js',
-    text: 'That was easy!'
+    from: 'dreamyweddy@gmail.com',
+    to: 'dreamyweddy@gmail.com',
+    subject: 'New Customer',
+    text: JSON.stringify(newInterest)
   };
   
   transporter.sendMail(mailOptions, function(error, info){

@@ -3,6 +3,7 @@
     width: var(--img-size-pc);
     padding-left: 30px;
     margin: auto;
+    margin-bottom: 60px;
 
     box-shadow: 4px 4px 10px var(--cardColor);
 }
@@ -24,7 +25,7 @@
     color: var(--text);
 }
 #contact-us input[type="text"],
-#contact-us input[type="number"],
+#contact-us input[type="tel"],
 #contact-us input[type="email"],
 #contact-us textarea{
     background-color: var(--cardColor);
@@ -42,11 +43,6 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
 }
 
 #contact-us input[type="submit"]{
