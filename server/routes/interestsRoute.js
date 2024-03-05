@@ -13,7 +13,6 @@ router.get('/', async (req, res) => {
 
 });
 router.post('/', async (req, res) => {
-    console.log(interest)
     const interest = new InterestModel({
         name: req.body.name,
         phone: req.body.phone,
