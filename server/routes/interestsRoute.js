@@ -12,8 +12,8 @@ router.get('/', async (req, res) => {
   }
 
 });
-
 router.post('/', async (req, res) => {
+    console.log(interest)
     const interest = new InterestModel({
         name: req.body.name,
         phone: req.body.phone,
@@ -24,14 +24,55 @@ router.post('/', async (req, res) => {
     try {
         const newInterest = await interest.save()
         res.status(201).json(newInterest)
-        sendMail(newInterest)
+        sendMail('dreamyweddy@gmail.com',"New Customer", JSON.stringify(newInterest))
         
     } catch (err) {
         res.status(400).json({ message: err.message })
     }
 })
 
-function sendMail(newInterest){
+router.delete('/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const user = await InterestModel.findByIdAndDelete(id);
+    res.send(user);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send(error);
+  }
+});
+
+
+router.get('/accept/:id', async (req, res) => {
+  const {id} = req.params;
+  try{
+    const interest = await InterestModel.findById(id);
+    let mailSub = "Thanks for Contacting";
+    let mailBody = "Respected "+interest.name+", We are reviewing your request and will get in touch soon. Thank you."
+    sendMail(interest.email, mailSub, mailBody)
+    res.status(201).json(interest)
+  }catch(err){
+    res.status(400).json({message: err.message})
+  }
+
+});
+
+router.get('/reject/:id', async (req, res) => {
+  const {id} = req.params;
+  try{
+    const interest = await InterestModel.findById(id);
+    let mailSub = "Thanks for Contacting";
+    let mailBody = "Respected "+interest.name+", We are regret to inform that we are unable to take your wedding responsibilty in hand for now. still, thanks for contacting us"
+    sendMail(interest.email, mailSub, mailBody)
+    res.status(201).json(interest)
+  }catch(err){
+    res.status(400).json({message: err.message})
+  }
+
+});
+
+function sendMail(mailTo, mailSub, mailBody){
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -42,9 +83,9 @@ function sendMail(newInterest){
   
   var mailOptions = {
     from: 'dreamyweddy@gmail.com',
-    to: 'dreamyweddy@gmail.com',
-    subject: 'New Customer',
-    text: JSON.stringify(newInterest)
+    to: mailTo,
+    subject: mailSub,
+    text: mailBody
   };
   
   transporter.sendMail(mailOptions, function(error, info){

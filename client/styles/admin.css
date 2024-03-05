@@ -29,3 +29,26 @@ h1{
 .entry:nth-child(odd){
     background-color: #ffedd5;
 }
+#buttonDelete{
+    --buttonColor: rgb(51, 51, 51);
+}
+#buttonAccept{
+    --buttonColor: rgb(17, 153, 17);
+}
+#buttonReject{
+    --buttonColor: rgb(153, 17, 17);
+}
+
+button{
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--buttonColor);
+    border: 2px solid var(--buttonColor);
+    border-radius: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+button:hover{
+    color: var(--text);
+    border: 2px solid var(--text);
+}

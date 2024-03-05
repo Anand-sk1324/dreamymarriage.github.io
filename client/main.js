@@ -20,7 +20,6 @@ serviceBlocks.forEach((serviceBlock) => {
 const form = document.querySelector('form');
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
-    console.log(1)
 
     const Name = document.getElementById("Name");
     const Phone = document.getElementById("Phone");
@@ -40,7 +39,6 @@ form.addEventListener('submit', async (event) => {
             msg: Msg.value
         })
     })
-    console.log(await posting.json())
     if (posting.ok == true) {
         alert("Your response recorded succesfully")
     }
