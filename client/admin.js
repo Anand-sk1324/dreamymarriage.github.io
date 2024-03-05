@@ -1,5 +1,5 @@
 const entries = document.getElementById('entries');
-const baseUrl = "http://localhost:3000/interests/"
+const baseUrl = "https://dreamy-wedding-api.onrender.com/interests/"
 window.onload = async() =>{
     const response = await fetch(baseUrl, {
         method: "GET",
@@ -30,8 +30,8 @@ function entryTemplate({name, phone, email, msg="", _id}){
 async function DEL(_id){
     let areYouSure = confirm("Are you sure to delete the record?")
     if(!areYouSure)return;
-    let url = baseUrl+'id='+_id;
-    const response = await fetch(baseUrl+_id, {
+    let url = baseUrl+_id;
+    const response = await fetch(url, {
         method: "DELETE",
         headers: {
             "Content-Type": 'application/json'
