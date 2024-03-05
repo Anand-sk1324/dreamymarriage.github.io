@@ -49,7 +49,6 @@ async function accept(_id){
         },
     })
     const result = await response.json()
-    location.reload()
 }
 async function reject(_id){
     let url = baseUrl+'reject/'+_id;
@@ -60,5 +59,4 @@ async function reject(_id){
         },
     })
     const result = await response.json()
-    location.reload()
 }
