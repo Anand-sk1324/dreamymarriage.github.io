@@ -47,7 +47,7 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
-.logo img{
+#hero .logo img{
     width:  4.5rem;
     padding-left: 1rem;
 }
