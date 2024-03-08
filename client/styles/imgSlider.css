@@ -1,0 +1,59 @@
+
+  .slider {
+    width: 1000px;
+    aspect-ratio: 16/9;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden; /* <===  */
+    border-radius: 15px;
+  }
+  
+  .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.5s;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .slide h1{ 
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    top:50%;
+    transform: translate(0%,-50%);
+    text-align: center;
+    vertical-align: middle;
+
+    color: white;
+    font-size: 40px;
+  }
+  .btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 18px;
+  }
+  .btn:active {
+    transform: scale(1.1);
+  }
+  .btn-prev {
+    top: 45%;
+    left: 2%;
+  }
+  
+  .btn-next {
+    top: 45%;
+    right: 2%;
+  }
+  

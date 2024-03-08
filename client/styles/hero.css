@@ -1,15 +1,16 @@
 #hero{
     position: relative;
     padding: 10px;
-    margin-bottom: 50px;
+    margin: 0px auto 50px;
+    width: 1200px;
 }
-
 #hero h1{
     font-family: CurveFont;
     font-size: 4rem;
     font-weight: lighter;
     word-spacing: 1rem;
     position: absolute;
+    color: white;
     z-index: 10;
     
     width: 100%;
@@ -19,21 +20,35 @@
     text-align: center;
     vertical-align: middle;
 
-    color: white;
 }
+
 .main-photo{
     position: relative;
     margin: auto;
     aspect-ratio: 16/9;
-    width: 1200px;
-    background-color: rgb(54, 58, 13);
+    border-radius: 30px;
+    overflow: hidden;
+    background: url(../img/hero.png);
 }
-.main-photo>img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-    filter: brightness(0.6);
+.main-photo::before{
+    content: '';
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+.main-photo::after{
+    content: '';
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(255, 0, 0, 0.05);
 }
 nav{
     position: absolute;
@@ -41,6 +56,7 @@ nav{
     right: 0;
     left: 0;
     top: 20px;
+    
     padding: 0 20px;
 
     display: flex;
@@ -57,7 +73,7 @@ nav{
     margin-right: 1.5rem;
     scroll-behavior: smooth;
 }
-#hero .callToAction{
+#callToAction{
     font-family: BoldFont;
     font-size: large;
 
@@ -72,7 +88,8 @@ nav{
     border-radius: 20px;
     padding: 10px 20px;
     transition: box-shadow 0.5s;
+    z-index: 10;
 }
-#hero .callToAction:hover{
-    box-shadow: 0px 0px 10px white;
+#callToAction:hover{
+    box-shadow: 0px 0px 10px var(--bg);
 }
