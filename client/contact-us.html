@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamy Wedding</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/hero.css">
+    <link rel="stylesheet" href="./styles/contact-us.css">
+
+    <script src="./main.js" defer></script>
+</head>
+    <body>
+
+    <button id="toTheTop" onclick="window.scrollTo({top: 0, left: 0, behavior: 'smooth', });">O</button>
+
+    <div id="hero-wrapper">
+        <div id="hero">
+            <div class="main-photo" style="--bg-img: url(../img/handshake.avif)">
+
+                <nav>
+                    <div class="logo">
+                        <img src="./img/logo.png" alt="">
+                    </div>
+                    <div id="links">
+                        <a href="./index.html" class="hoverable">Home</a>
+                        <a href="./services.html" class="hoverable">Services</a>
+                        <a href="./contact-us.html" class="hoverable">Contact Us</a>
+                    </div>
+                    
+                </nav>
+                <h1>We Love To Hear You</h1>
+                <div class="stack-photo">
+
+                </div>
+                <a href="#contact-us" id="callToAction">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="contact-us">
+        <div class="left">
+            <h1>Contact Us</h1>
+            <form>
+                <label for="Name">Name</label>
+                <input 
+                    type="text" 
+                    id="Name" 
+                    name="name" required
+                >
+
+                
+                <label for="Phone">Phone</label>
+                <input 
+                    type="tel" 
+                    id="Phone" 
+                    name="phone" required
+                    pattern="[0-9]{10}"
+                >
+
+                <label for="Email">Email</label>
+                <input 
+                    type="email" 
+                    id="Email" 
+                    name="email" required
+                >
+
+                
+                <label for="Message">Optional Message</label>
+                <textarea 
+                    id="Msg" 
+                    cols="30" 
+                    rows="5" 
+                    name="msg"></textarea>
+
+                <input 
+                    type="submit" 
+                    value="Send a Mail" 
+                    id="submit"
+                >
+            </form>
+        </div>
+        <div class="right">
+            <img src="./img/contact-us.png" alt="">
+        </div>
+    </div>
+    <div id="footer-wrapper">
+        <footer>
+            <div class="logo">
+                <img src="./img/logo.png" alt="">
+            </div>
+            
+            <div id="links">
+                <h4>Links</h4>
+                <a href="./index.html">Home</a>
+                <a href="./services.html">Services</a>
+                <a href="./contact-us.html">Contact Us</a>
+            </div>
+    
+            <div class="contacts">
+                <h4>Contact Us</h4>
+                <button class="contact" onclick="window.open('tel:+919941210594')">+91 9941210594</button>
+                <button class="contact" onclick="window.open('mailTo:dreamyweddy@gmail.com')">dreamyweddy@gmail.com</button>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

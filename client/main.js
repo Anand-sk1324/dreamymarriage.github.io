@@ -1,22 +1,4 @@
 
-const serviceBlocks = document.querySelectorAll(".service-block");
-
-serviceBlocks.forEach((serviceBlock) => {
-    const services = serviceBlock.querySelectorAll(".service");
-    services.forEach(service => {
-        document.addEventListener('scroll', () => {
-            let DisplayPosition = serviceBlock.firstElementChild.getBoundingClientRect().top;
-            let myPosition = service.getBoundingClientRect().top;
-            if (DisplayPosition == myPosition) {
-                service.style.opacity = "1"
-            } else {
-                service.style.opacity = "0"
-            }
-        })
-    })
-});
-
-
 const form = document.querySelector('form');
 form.addEventListener('submit', async (event) => {
     event.preventDefault();

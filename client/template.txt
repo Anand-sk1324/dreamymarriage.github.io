@@ -1,0 +1,15 @@
+ <div class="slider">
+    <!-- slide -->
+    <div class="slide">
+        <!-- Title and description-->
+        <h1></h1>
+        
+        <h2></h2>
+        <!-- Image -->
+      <img src="./img/service/" alt="" />
+    </div>
+
+    <!-- Control buttons -->
+    <button class="btn btn-next"> > </button>
+    <button class="btn btn-prev"> < </button>
+  </div>
