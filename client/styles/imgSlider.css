@@ -6,6 +6,7 @@
     margin: 0 auto;
     overflow: hidden; /* <===  */
     border-radius: 15px;
+    margin-bottom: 30px;
   }
   
   .slide {
@@ -19,18 +20,31 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(0.6);
   }
-  .slide h1{ 
+  .slide h1,
+  .slide h2{ 
     position: absolute;
     z-index: 10;
     width: 100%;
-    top:50%;
     transform: translate(0%,-50%);
+    margin: 0;
     text-align: center;
     vertical-align: middle;
 
     color: white;
     font-size: 40px;
+  }
+  .slide h1{
+    top:45%;
+    font-family: CurveFont;
+    font-size: 60px;
+    font-weight: lighter;
+  }
+  .slide h2{
+    top:55%;
+    font-family: HeadingFont;
+    color: var(--bg);
   }
   .btn {
     position: absolute;
@@ -39,10 +53,15 @@
     padding: 10px;
     border: none;
     border-radius: 50%;
-    z-index: 10px;
+    z-index: 10;
     cursor: pointer;
-    background-color: #fff;
+    background-color: #ffffff80;
+    transition: background-color 0.1s;
+    transition:transform 0.1s;
     font-size: 18px;
+  }
+  .btn:hover{
+    background-color: rgba(255, 255, 255, 0.8);
   }
   .btn:active {
     transform: scale(1.1);

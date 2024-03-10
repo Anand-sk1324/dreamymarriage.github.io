@@ -28,7 +28,9 @@
     aspect-ratio: 16/9;
     border-radius: 30px;
     overflow: hidden;
-    background: url(../img/hero.png);
+    background: var(--bg-img);
+    background-size: cover;
+    background-position: center;
 }
 .main-photo::before{
     content: '';

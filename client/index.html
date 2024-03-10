@@ -6,28 +6,28 @@
     <title>Dreamy Wedding</title>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/hero.css">
+    <link rel="stylesheet" href="./styles/imgSlider.css">
     <link rel="stylesheet" href="./styles/why.css">
-    <link rel="stylesheet" href="./styles/plans.css">
-    <link rel="stylesheet" href="./styles/services.css">
     <link rel="stylesheet" href="./styles/team.css">
-    <link rel="stylesheet" href="./styles/contact-us.css">
-
-    <script src="./main.js" defer></script>
+    
+    <script src="./imgSlider.js" defer></script>
 </head>
 <body>
+
+    <button id="toTheTop" onclick="window.scrollTo({top: 0, left: 0, behavior: 'smooth', });">O</button>
+
     <div id="hero-wrapper">
         <div id="hero">
-            <div class="main-photo">
-                <img src="./img/hero.png" alt="">
+            <div class="main-photo" style="--bg-img: url(../img/hero.png)">
 
                 <nav>
                     <div class="logo">
                         <img src="./img/logo.png" alt="">
                     </div>
                     <div id="links">
-                        <a href="#plans" class="hoverable">Plans</a>
-                        <a href="#services" class="hoverable">Services</a>
-                        <a href="#contact-us" class="hoverable">Contact Us</a>
+                        <a href="./index.html" class="hoverable">Home</a>
+                        <a href="./services.html" class="hoverable">Services</a>
+                        <a href="./contact-us.html" class="hoverable">Contact Us</a>
                     </div>
                     
                 </nav>
@@ -35,7 +35,7 @@
                 <div class="stack-photo">
 
                 </div>
-                <a href="#contact-us" class="callToAction">Contact Us</a>
+                <a href="./contact-us.html" id="callToAction">Contact Us</a>
             </div>
         </div>
     </div>
@@ -55,268 +55,32 @@
         </div>     
     </div>
 
-
-    <div id="plans">
-        <h1 class="title">Explore Our Diverse Wedding Experiences</h1>
-        <div class="plan-container">
-            <div class="plan" style="--rotation:1deg;">
-                <h2 class="plan-name">Traditional</h2>
-                <div class="img-c">
-                    <img src="./img/plans/plan-traditional.png" alt="">
-                </div>
-            </div>
-            <div class="plan" style="--rotation:-0.8deg;">
-                <h2 class="plan-name">Destination</h2>
-                <div class="img-c">
-                    <img src="./img/plans/plan-destination.avif" alt="">
-                </div>
-            </div>
-            <div class="plan" style="--rotation:0deg;">
-                <h2 class="plan-name">Theme</h2>
-                <div class="img-c">
-                    <img src="./img/plans/plan-theme.webp" alt="">
-                </div>
-            </div>
-            
+    <div class="slider">
+        <!-- slide 1 -->
+        <div class="slide">
+            <!-- Title and description-->>
+            <h1>Special Offer For You</h1>
+            <h2>Honey Moon Package 50% Off</h2>
+    
+            <!-- Image -->
+          <img src="./img/honeymoon.webp" alt="" />
         </div>
-    </div>
-    <div id="services">
-        <h1>How We Help</h1>
-        <div id="services-wrapper">
-            <div class="service-block one">
+        <!-- slide 1 -->
+        <div class="slide">
+            <!-- Title and description-->>
+            <h1>Special Offer For You</h1>
+            <h2>Post Wedding Photo-Shoot</h2>
 
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:4deg">
-                        <h2>Food</h2>
-                        <h3>SouthIndian</h3>
-                        <img src="./img/service/1/south-indian.png" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:-4deg">
-                        <h2>Food</h2>
-                        <h3>NorthIndian</h3>
-                        <img src="./img/service/1/north-indian.png" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:1.2deg">
-                        <h2>Catering</h2>
-                        <h3>Banthi</h3>
-                        <img src="./img/service/1/banthi.jpg" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:2deg">
-                        <h2>Catering</h2>
-                        <h3>Banthi</h3>
-                        <img src="./img/service/1/banthi2.jpg" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:-3.5deg">
-                        <h2>Catering</h2>
-                        <h3>Buffet</h3>
-                        <img src="./img/service/1/buffet1.webp" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:-2deg">
-                        <h2>Catering</h2>
-                        <h3>Buffet</h3>
-                        <img src="./img/service/1/buffet2.jpg" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:3deg">
-                        <h2>Photography</h2>
-                        <h3>Professional</h3>
-                        <img src="./img/service/1/photography1.jpg" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:2.8deg">
-                        <h2>Photography</h2>
-                        <h3>Professional</h3>
-                        <img src="./img/service/1/photography2.jpg" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:-1deg">
-                        <h2>Photography</h2>
-                        <h3>Drone</h3>
-                        <img src="./img/service/1/photography-drone1.jpg" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:-0deg">
-                        <h2>Photography</h2>
-                        <h3>Drone</h3>
-                        <img src="./img/service/1/photography-drone2.jpg" alt="">
-                    </div>
-                </div>
-                
-            </div>
-
-            <div class="service-block two">
-
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:-4deg">
-                        <h2>Venues</h2>
-                        <h3></h3>
-                        <img src="./img/service/2/venue1.jpg" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:-2deg">
-                        <h2>Venues</h2>
-                        <h3></h3>
-                        <img src="./img/service/2/venue2.webp" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:4deg">
-                        <h2>Venues</h2>
-                        <h3></h3>
-                        <img src="./img/service/2/venue3.jpeg" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:-0deg">
-                        <h2>Venues</h2>
-                        <h3></h3>
-                        <img src="./img/service/2/tent1.jpg" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:-1.5deg">
-                        <h2>Venues</h2>
-                        <h3></h3>
-                        <img src="./img/service/2/tent2.jpg" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:3deg">
-                        <h2>BrideEntry</h2>
-                        <h3>Car</h3>
-                        <img src="./img/service/2/bride-entry-car.webp" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:-3deg">
-                        <h2>BrideEntry</h2>
-                        <h3>Crackers</h3>
-                        <img src="./img/service/2/bride-entry-crackers.jpg" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:-2.7deg">
-                        <h2>BrideEntry</h2>
-                        <h3>Dance</h3>
-                        <img src="./img/service/2/bride-entry-dance.jpeg" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:-3.5deg">
-                        <h2>BrideEntry</h2>
-                        <h3>Bouncers</h3>
-                        <img src="./img/service/2/bride-entry-bouncers.webp" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:-2.5deg">
-                        <h2>BrideEntry</h2>
-                        <h3>DJ</h3>
-                        <img src="./img/service/2/bride-entry-dj.jpg" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:1deg">
-                        <h2>BrideEntry</h2>
-                        <h3>Anchor</h3>
-                        <img src="./img/service/2/bride-entry-anchor.jpg" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:-3deg">
-                        <h2>BrideEntry</h2>
-                        <h3>Orchastra</h3>
-                        <img src="./img/service/2/bride-entry-orchastra.jpg" alt="">
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="service-block three">
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:4deg">
-                        <h2>Invitations</h2>
-                        <h3></h3>
-                        <img src="./img/service/3/invitation4.png" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:-2deg">
-                        <h2>Invitations</h2>
-                        <h3></h3>
-                        <img src="./img/service/3/invitation2.png" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:-3deg">
-                        <h2>Invitations</h2>
-                        <h3></h3>
-                        <img src="./img/service/3/invitation3.png" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:4deg">
-                        <h2>Etc</h2>
-                        <h3>Instruments</h3>
-                        <img src="./img/service/3/etc-instruments.jpg" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:1deg">
-                        <h2>Etc</h2>
-                        <h3>Customes</h3>
-                        <img src="./img/service/3/etc-custome.jpeg" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:-2.8deg">
-                        <h2>Etc</h2>
-                        <h3>Makeup</h3>
-                        <img src="./img/service/3/makeup.jpg" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:-1deg">
-                        <h2>Etc</h2>
-                        <h3>Perohit</h3>
-                        <img src="./img/service/3/etc-perohit.webp" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:2.7deg">
-                        <h2>Etc</h2>
-                        <h3>Garlands</h3>
-                        <img src="./img/service/3/etc-garland.webp" alt="">
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="service-img-c" style="--rotation:-0deg">
-                        <h2>Etc</h2>
-                        <h3>Veni</h3>
-                        <img src="./img/service/3/etc-veni.jpg" alt="">
-                    </div>
-                </div>
-
-            </div>
+            <!-- Image -->
+            <img src="./img/post-wedding-photoshoot.avif" alt="" />
         </div>
-    </div>
-
-    <div id="team">
+       
+      
+        <!-- Control buttons -->
+        <button class="btn btn-next"> > </button>
+        <button class="btn btn-prev"> < </button>
+      </div>
+      <div id="team">
         <h1>Our Teams</h1>
         <div id="member-list">
 
@@ -326,6 +90,17 @@
                 </div>
                 <h2 class="member-name">Meganathan</h2>
                 <h4 class="member-role">Head of Catering services</h4>
+                <div class="contacts">
+                    <button class="contact" onclick="window.open('tel:+917397421127');">
+                        <img src="./img/contact/phone.svg" alt="">
+                    </button>
+                    <button class="contact" onclick="window.open('mailto:milkymega1@gmail.com');">
+                        <img src="./img/contact/email-outline.svg" alt="">
+                    </button>
+                    <button class="contact" onclick="window.open('https://www.instagram.com/mega_marley_/')">
+                        <img src="./img/contact/instagram.svg" alt="">
+                    </button>
+                </div>
             </div>
 
             <div class="member">
@@ -334,6 +109,17 @@
                 </div>
                 <h2 class="member-name">Harini</h2>
                 <h4 class="member-role">Leading Head</h4>
+                <div class="contacts">
+                    <button class="contact" onclick="window.open('tel:+919941210594');">
+                        <img src="./img/contact/phone.svg" alt="">
+                    </button>
+                    <button class="contact" onclick="window.open('mailto:harinissureshbabu185@gmail.com');">
+                        <img src="./img/contact/email-outline.svg" alt="">
+                    </button>
+                    <button class="contact" onclick="window.open('https://www.instagram.com/suresh061016/')">
+                        <img src="./img/contact/instagram.svg" alt="">
+                    </button>
+                </div>
             </div>
 
             <div class="member">
@@ -342,54 +128,18 @@
                 </div>
                 <h2 class="member-name">Suganya</h>
                 <h4 class="member-role">Head of Decoration services</h4>
+                <div class="contacts">
+                    <button class="contact" onclick="window.open('tel:+917305044716');">
+                        <img src="./img/contact/phone.svg" alt="">
+                    </button>
+                    <button class="contact" onclick="window.open('mailto:ssuganya5423@gmail.com');">
+                        <img src="./img/contact/email-outline.svg" alt="">
+                    </button>
+                    <button class="contact" onclick="window.open('https://www.instagram.com/suga_nya29/')">
+                        <img src="./img/contact/instagram.svg" alt="">
+                    </button>
+                </div>
             </div>
-        </div>
-    </div>
-
-    <div id="contact-us">
-        <div class="left">
-            <h1>Contact Us</h1>
-            <form>
-                <label for="Name">Name</label>
-                <input 
-                    type="text" 
-                    id="Name" 
-                    name="name" required
-                >
-
-                
-                <label for="Phone">Phone</label>
-                <input 
-                    type="tel" 
-                    id="Phone" 
-                    name="phone" required
-                    pattern="[0-9]{10}"
-                >
-
-                <label for="Email">Email</label>
-                <input 
-                    type="email" 
-                    id="Email" 
-                    name="email" required
-                >
-
-                
-                <label for="Message">Optional Message</label>
-                <textarea 
-                    id="Msg" 
-                    cols="30" 
-                    rows="5" 
-                    name="msg"></textarea>
-
-                <input 
-                    type="submit" 
-                    value="Send a Mail" 
-                    id="submit"
-                >
-            </form>
-        </div>
-        <div class="right">
-            <img src="./img/contact-us.png" alt="">
         </div>
     </div>
     <div id="footer-wrapper">
@@ -400,16 +150,15 @@
             
             <div id="links">
                 <h4>Links</h4>
-                <a href="#services">Services</a>
-                <a href="#contact-us">Contact Us</a>
-                <a href="#about-us" >About Us</a>
+                <a href="./index.html">Home</a>
+                <a href="./services.html">Services</a>
+                <a href="./contact-us.html">Contact Us</a>
             </div>
     
             <div class="contacts">
                 <h4>Contact Us</h4>
-                <div class="contact"><img src="./img/icons/phone-call.png" alt="">9080xxxxxx</div>
-                <div class="contact">dreamywedding@gmail.com</div>
-                <div class="contact"></div>
+                <button class="contact" onclick="window.open('tel:+919941210594')">+91 9941210594</button>
+                <button class="contact" onclick="window.open('mailTo:dreamyweddy@gmail.com')">dreamyweddy@gmail.com</button>
             </div>
         </footer>
     </div>

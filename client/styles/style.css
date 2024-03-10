@@ -34,6 +34,25 @@
      padding: 0;
      margin: 0;
  }
+ #toTheTop{
+    all: unset;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--cardColor);
+    color: white;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    z-index: 11;
+    text-align: center;
+    box-shadow: 0px 0px 10px var(--bg);
+    transition: box-shadow 0.2s;
+ }
+ #toTheTop:hover{
+    box-shadow: 0px 0px 10px var(--text);
+ }
  .hoverable{
      position: relative;
  }
@@ -63,17 +82,20 @@
      opacity: 1;
  }
 #footer-wrapper{
-    
     background-color: var(--cardColor);
-    padding: 20px;
+    min-width: var(--img-size-pc);
+    height: fit-content;
+    margin: 0;
+    padding: 10px;
 }
 footer{
-    background-color: var(--cardColor);
-    margin-top: 30px;
     display: flex;
     width: var(--img-size-pc);
     margin: 0 auto;
     color: white;
+}
+footer>*{
+    flex: 1;
 }
 footer .logo{
     align-self: center;
@@ -82,16 +104,15 @@ footer .logo img{
     width:  6rem;
     padding-left: 1rem;
 }
-footer>*{
-    flex: 1;
-}
 footer h4{
     margin-bottom: 10px;
 }
 footer a, footer .contact{
+    all: unset;
     display: block;
     margin-bottom: 6px;
+    cursor: default;
 }
-footer>#links>a:hover{
+footer>#links>a:hover, footer .contact:hover{
     color: var(--bg);
 }
