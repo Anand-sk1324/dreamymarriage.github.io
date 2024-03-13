@@ -3,7 +3,7 @@ import axios from 'redaxios';
 
 import './style/admin.css';
 function Admin(){
-    const baseUrl = 'http://localhost:3000/interests/';
+    const baseUrl = process.env.BASE_URL||'http://localhost:3000/interests';
     const [interests, setInterests] = useState([])
     useEffect(()=>{
         axios.get(baseUrl).then((res) => 

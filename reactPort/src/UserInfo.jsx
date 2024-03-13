@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from 'redaxios';
+import axios from 'axios';
 function UserInfo(){
     const {id} = useParams();
     const [userData, setUserData] = useState([]);
-    const baseUrl = 'http://localhost:3000/interests/';
+    const baseUrl = process.env.BASE_URL||'http://localhost:3000/interests';
     useEffect(()=>{
         axios.get(baseUrl+id).then((res) => 
             setUserData(res.data)
