@@ -3,7 +3,7 @@ import axios from 'redaxios';
 
 import './style/admin.css';
 function Admin(){
-    const baseUrl = process.env.BASE_URL||'http://localhost:3000/interests';
+    const baseUrl = 'https://dreamy-wedding-api.onrender.com/interests/';
     const [interests, setInterests] = useState([])
     useEffect(()=>{
         axios.get(baseUrl).then((res) => 

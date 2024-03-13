@@ -34,7 +34,7 @@ function ContactUs() {
     const submitAction = () => {
         event.preventDefault();
         console.log(foodSelections)
-        axios.post(process.env.BASE_URL||'http://localhost:3000/interests', {
+        axios.post('https://dreamy-wedding-api.onrender.com/interests/', {
             name: clientName,
             phone: clientPhone,
             email: clientEmail,

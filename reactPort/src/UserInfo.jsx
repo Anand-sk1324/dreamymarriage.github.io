@@ -4,7 +4,7 @@ import axios from 'redaxios';
 function UserInfo(){
     const {id} = useParams();
     const [userData, setUserData] = useState([]);
-    const baseUrl = process.env.BASE_URL||'http://localhost:3000/interests';
+    const baseUrl = 'https://dreamy-wedding-api.onrender.com/interests/';
     useEffect(()=>{
         axios.get(baseUrl+id).then((res) => 
             setUserData(res.data)
