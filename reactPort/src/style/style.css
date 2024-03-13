@@ -1,0 +1,118 @@
+:root{
+    --bg: #F2DAB7;
+    --text: #4E5A72;
+    --cardColor: #BF5670;
+    --cardShadow: #6D4156;
+ 
+    --img-size-pc: 1200px; 
+ 
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: ContentFont;
+ }
+ @font-face {
+     font-family: CurveFont;
+     src: url(../font/ImperialScript-Regular.ttf);
+ }
+ @font-face {
+     font-family: BoldFont;
+     src: url(../font/Righteous-Regular.ttf);
+ }
+ @font-face {
+     font-family: HeadingFont;
+     src: url(../font/DMSerifDisplay-Regular.ttf);
+ }
+ @font-face {
+     font-family: ContentFont;
+     src: url(../font/Bitter-VariableFont_wght.ttf);
+ }
+ *, *::before, *::after{
+     box-sizing: border-box;
+ }
+ body{
+     position: relative;
+     padding: 0;
+     margin: 0;
+ }
+ #toTheTop{
+    all: unset;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--cardColor);
+    color: white;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    z-index: 11;
+    text-align: center;
+    box-shadow: 0px 0px 10px var(--bg);
+    transition: box-shadow 0.2s;
+ }
+ #toTheTop:hover{
+    box-shadow: 0px 0px 10px var(--text);
+ }
+ .hoverable{
+     position: relative;
+ }
+ .hoverable::before ,.hoverable::after{
+     content: "";
+     position: absolute;
+     width: 120%;
+     left: -10%;
+     height: 100%;
+     background-color: white;
+     mask-image: url(../assets/border.png);
+     mask-size: cover;
+     mask-position: center;
+     opacity: 0;
+     transition-property: opacity;
+     transition-duration: 0.2s;
+     transition-timing-function: ease-in-out;
+ }
+ .hoverable::before{
+     bottom: 100%;
+ }
+ .hoverable::after{
+     top: 100%;
+     transform: rotate(180deg);
+ }
+ .hoverable:hover::before ,.hoverable:hover::after{
+     opacity: 1;
+ }
+#footer-wrapper{
+    background-color: var(--cardColor);
+    min-width: var(--img-size-pc);
+    height: fit-content;
+    margin: 0;
+    padding: 10px;
+}
+footer{
+    display: flex;
+    width: var(--img-size-pc);
+    margin: 0 auto;
+    color: white;
+}
+footer>*{
+    flex: 1;
+}
+footer .logo{
+    align-self: center;
+}
+footer .logo img{
+    width:  6rem;
+    padding-left: 1rem;
+}
+footer h4{
+    margin-bottom: 10px;
+}
+footer a, footer .contact{
+    all: unset;
+    display: block;
+    margin-bottom: 6px;
+    cursor: default;
+}
+footer>#links>a:hover, footer .contact:hover{
+    color: var(--bg);
+}

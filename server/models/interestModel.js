@@ -15,6 +15,22 @@ const interestSchema = new mongoose.Schema({
     },
     msg: {
         type: String,
-    }});
+    },
+    plans: [{
+        type: String
+    }],
+    foods: [{
+        type: String
+    }],
+    photography: [{
+        type: String
+    }],
+    entry: [{
+        type: String
+    }],
+    etc: [{
+        type: String
+    }],
+});
 
-    module.exports = mongoose.model('Interest', interestSchema)
+module.exports = mongoose.model('Interest', interestSchema)

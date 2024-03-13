@@ -1,0 +1,36 @@
+#why{
+    position: relative;
+    margin: auto;
+    display: flex;
+    margin-bottom: 50px;
+    min-height: 300px;
+    width: var(--img-size-pc);
+}
+#why>*{
+    flex: 1;
+}
+#why .heading-container{
+    font-family: HeadingFont;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#why .temp{
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 5px;
+    background-color: var(--text);
+}
+#why .text-container{
+    font-family: ContentFont;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#why .text-container p{
+    max-width: 30ch;
+    color: var(--text);
+}

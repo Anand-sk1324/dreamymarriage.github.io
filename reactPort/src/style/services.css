@@ -1,0 +1,12 @@
+#services{
+    width: var(--img-size-pc);
+    margin: 0 auto;
+}
+#services>h1{
+    font-family: HeadingFont;
+    text-align: center;
+    color: var(--text);
+}
+#services>div{
+    position:sticky
+}
