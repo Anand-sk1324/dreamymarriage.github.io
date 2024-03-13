@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import axios from 'axios';
+import axios from 'redaxios';
 
 import './style/admin.css';
 function Admin(){
