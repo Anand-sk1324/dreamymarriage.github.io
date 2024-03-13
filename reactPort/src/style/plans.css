@@ -1,0 +1,45 @@
+#plans{    
+    width: var(--img-size-pc);
+    margin: 0 auto;
+}
+#plans h1{
+    position: sticky;
+    top: 10px;
+
+    font-family: HeadingFont;
+    width: fit-content;
+    margin: 40px auto;
+    color: var(--text);
+}
+#plans .plan{
+    position: sticky;
+    top: 100px;
+
+}
+#plans .plan .img-c{
+    position: relative;
+    margin: auto;
+    width: 1000px;
+    aspect-ratio: 16/9;
+    transform: rotate(var(--rotation));
+    border-radius: 20px;
+    overflow: hidden;
+}
+#plans .plan h2{
+    position: absolute;
+    font-size: 5rem;
+    font-weight: normal;
+    font-family: CurveFont;
+    z-index: 10;
+    color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -100%);
+
+}
+#plans .plan .img-c img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}

@@ -13,7 +13,7 @@ db.once('open', () => console.log("DB connected"))
 
 app.use(express.json())
 app.use(express.static('public'))
-app.use(cors('https://dreamy-wedding.onrender.com'))
+app.use(cors("https://dreamy-wedding.onrender.com"))
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
@@ -38,11 +38,11 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 // in latest body-parser use like below.
 app.use(bodyParser.urlencoded({
-    extended: true
-  }));
+  extended: true
+}));
 
 const interestsRouter = require('./routes/interestsRoute.js');
 app.use("/interests", interestsRouter)
 app.listen(3000, () => {
-    console.log("Server Started")
+  console.log("Server Started")
 })
