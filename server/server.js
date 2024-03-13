@@ -34,15 +34,19 @@ app.use((req, res, next) => {
 
   next();
 });
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 
 app.use(bodyParser.json());
 // in latest body-parser use like below.
 app.use(bodyParser.urlencoded({
-    extended: true
-  }));
+  extended: true
+}));
 
 const interestsRouter = require('./routes/interestsRoute.js');
 app.use("/interests", interestsRouter)
 app.listen(3000, () => {
-    console.log("Server Started")
+  console.log("Server Started")
 })
