@@ -15,13 +15,13 @@ function HeroSection({bgImg, text}) {
                     
                     <ul id='links'>
                         <li>
-                            <a href="/">Home</a>
+                            <a href="/" className='hoverable'>Home</a>
                         </li>
                         <li>
-                            <a href="/services">Services</a>
+                            <a href="/services" className='hoverable'>Services</a>
                         </li>
                         <li>
-                            <a href="/contact-us">Contact Us</a>
+                            <a href="/contact-us" className='hoverable'>Contact Us</a>
                         </li>
                     </ul>
                 </nav>

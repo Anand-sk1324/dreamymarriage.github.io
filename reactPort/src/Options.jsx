@@ -23,7 +23,7 @@ function Options({optionTitle, optionValues, optionsList, setOptionsList}){
             {optionsList.map((option) => 
                 <button key={option} onClick={ () =>
                     setOptionsList(prev => prev.filter(el => el !== option ))
-                }>{option}</button>
+                }>{option} x</button>
             )}
         </>
     )

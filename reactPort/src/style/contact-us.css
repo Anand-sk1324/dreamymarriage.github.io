@@ -70,10 +70,14 @@ input::-webkit-inner-spin-button {
     object-fit: cover;
 }
 #contact-us button{
-    color: var(--cardColor);
-    border: 2px solid var(--text);
+    color: var(--text);
+    margin-bottom: 5px;
+    background-color: transparent;
+    border: 2px solid var(--cardColor);
+    padding: 5px;
+    border-radius: 10px;
 }
 #contact-us button:hover{   
-    color: var(--text);
-    border: 2px solid var(--cardColor);
+    color: white;
+    background-color: var(--cardColor);
 }

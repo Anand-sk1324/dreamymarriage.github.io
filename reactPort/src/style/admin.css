@@ -42,7 +42,7 @@ h2{
     --buttonColor: rgb(153, 17, 17);
 }
 
-button{
+#main button{
     text-decoration: none;
     background-color: transparent;
     color: var(--buttonColor);
@@ -51,7 +51,7 @@ button{
     font-weight: bold;
     margin-right: 10px;
 }
-button:hover{
+#main button:hover{
     color: var(--text);
     border: 2px solid var(--text);
 }

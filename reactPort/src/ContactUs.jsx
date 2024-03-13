@@ -50,6 +50,7 @@ function ContactUs() {
     }
     return ( 
         <>
+
         <HeroSection bgImg={heroBg} text={"We Love To Hear You"}></HeroSection>
 
         <div id="contact-us">

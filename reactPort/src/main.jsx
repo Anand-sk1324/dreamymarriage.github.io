@@ -34,6 +34,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+  <button id="toTheTop" onClick={() => window.scrollTo({top: 0, left: 0, behavior: 'smooth', })}>O</button>
     <RouterProvider router={router} />
   </React.StrictMode>,
 )
