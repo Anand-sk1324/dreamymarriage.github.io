@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'redaxios';
 import { useState, useEffect } from "react";
 
 import HeroSection from "./HeroSection";
