@@ -13,11 +13,11 @@ db.once('open', () => console.log("DB connected"))
 
 app.use(express.json())
 app.use(express.static('public'))
-app.use(cors("https://dreamy-wedding.onrender.com"))
+app.use(cors("https://dreamy-wedding.onrender.com/"))
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://dreamy-wedding.onrender.com"
+    "https://dreamy-wedding.onrender.com/"
   );
   res.setHeader(
     "Access-Control-Allow-Methods",
