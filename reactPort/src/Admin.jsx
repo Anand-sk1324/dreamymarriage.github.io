@@ -20,8 +20,9 @@ function Admin(){
     }
     const accept = (interestID) => {
         console.log('accept')
-        let url = baseUrl+'reject/'+interestID;
+        let url = baseUrl+'accept/'+interestID;
         const response = axios.get(url);
+        console.log(response.then())
     }
 
     const reject = (interestID) => {
